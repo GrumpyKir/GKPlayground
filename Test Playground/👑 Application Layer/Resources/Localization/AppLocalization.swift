@@ -7,8 +7,8 @@
 
 import Foundation
 
-enum AppLocalization {
-
+enum AppLocalization: String, Localizable {
+   
     enum General: String, Localizable {
         case ok = "OK"
         case save = "Save"
@@ -24,6 +24,15 @@ enum AppLocalization {
         case errorTitle = "Error"
         case errorLoading = "ErrorLoading"
         case errorUnknown = "ErrorUnknown"
+    }
+    
+    case title = "AppTitle"
+    
+    enum Tabs: String, Localizable {
+        case network = "TabRemoteListTitle"
+        case local = "TabLocalListTitle"
+        case service = "TabServiceTitle"
+        case settings = "TabsettingsTitle"
     }
     
     enum Theme: String, Localizable {

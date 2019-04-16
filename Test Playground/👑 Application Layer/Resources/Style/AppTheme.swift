@@ -13,7 +13,7 @@ enum AppTheme {
     public static var statusBarStyle: UIStatusBarStyle {
         switch AppThemeManager.current.type {
         case .light:
-            return .lightContent
+            return .default
         case .dark:
             return .lightContent
         }
@@ -25,7 +25,7 @@ enum AppTheme {
         case .light:
             return UIColor(hex: "FFFFFF", alpha: 1.0)
         case .dark:
-            return UIColor(hex: "2A2A30", alpha: 1.0)
+            return UIColor(hex: "2D2D2D", alpha: 1.0)
         }
     }
     
@@ -33,9 +33,9 @@ enum AppTheme {
     public static var backgroundBar: UIColor {
         switch AppThemeManager.current.type {
         case .light:
-            return UIColor(hex: "4ABAF9", alpha: 1.0)
+            return UIColor(hex: "F8F8F8", alpha: 1.0)
         case .dark:
-            return UIColor(hex: "CE1F1F", alpha: 1.0)
+            return UIColor(hex: "1E1E1E", alpha: 1.0)
         }
     }
     
@@ -60,12 +60,21 @@ enum AppTheme {
     }
     
     // MARK: - Text color on accent background
-    public static var accentText: UIColor {
+    public static var accentTextMain: UIColor {
         switch AppThemeManager.current.type {
         case .light:
             return UIColor(hex: "FFFFFF", alpha: 1.0)
         case .dark:
             return UIColor(hex: "FFFFFF", alpha: 1.0)
+        }
+    }
+    
+    public static var accentTextSub: UIColor {
+        switch AppThemeManager.current.type {
+        case .light:
+            return UIColor(hex: "FFFFFF", alpha: 0.6)
+        case .dark:
+            return UIColor(hex: "FFFFFF", alpha: 0.6)
         }
     }
     

@@ -48,6 +48,12 @@ class InitialPresenter: ViperPresenter, InitialPresenterInput, InitialViewOutput
         self.view?.setupInitialState(with: self.viewModel)
     }
     
+    func finishStartupAnimation() {
+        Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false, block: { _ in
+            self.router?.presentMainApplication()
+        })
+    }
+    
     // MARK: - InitialInteractorOutput
     
     // MARK: - Module functions

@@ -9,6 +9,37 @@
 /* Begin PBXBuildFile section */
 		D222715495285672E0473B14 /* Pods_Test_Playground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1028CABEDD95EC2BFBDAEDC5 /* Pods_Test_Playground.framework */; };
 		ED8464EA22649078003523BC /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8464E922649078003523BC /* AppManager.swift */; };
+		ED8464EE22649829003523BC /* AlbumByIdUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8464ED22649829003523BC /* AlbumByIdUseCase.swift */; };
+		ED8464F622649853003523BC /* RemoteListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8464EF22649853003523BC /* RemoteListViewModel.swift */; };
+		ED8464F722649853003523BC /* RemoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8464F022649853003523BC /* RemoteListViewController.swift */; };
+		ED8464F822649853003523BC /* RemoteListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8464F122649853003523BC /* RemoteListAssembly.swift */; };
+		ED8464F922649853003523BC /* RemoteListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8464F222649853003523BC /* RemoteListInteractor.swift */; };
+		ED8464FA22649853003523BC /* RemoteListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8464F322649853003523BC /* RemoteListRouter.swift */; };
+		ED8464FB22649853003523BC /* RemoteListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED8464F422649853003523BC /* RemoteListViewController.xib */; };
+		ED8464FC22649853003523BC /* RemoteListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8464F522649853003523BC /* RemoteListPresenter.swift */; };
+		ED84650422649876003523BC /* LocalListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8464FD22649876003523BC /* LocalListViewModel.swift */; };
+		ED84650522649876003523BC /* LocalListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8464FE22649876003523BC /* LocalListViewController.swift */; };
+		ED84650622649876003523BC /* LocalListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8464FF22649876003523BC /* LocalListAssembly.swift */; };
+		ED84650722649876003523BC /* LocalListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84650022649876003523BC /* LocalListInteractor.swift */; };
+		ED84650822649876003523BC /* LocalListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84650122649876003523BC /* LocalListRouter.swift */; };
+		ED84650922649876003523BC /* LocalListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED84650222649876003523BC /* LocalListViewController.xib */; };
+		ED84650A22649876003523BC /* LocalListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84650322649876003523BC /* LocalListPresenter.swift */; };
+		ED846512226498A0003523BC /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84650B226498A0003523BC /* SettingsViewModel.swift */; };
+		ED846513226498A0003523BC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84650C226498A0003523BC /* SettingsViewController.swift */; };
+		ED846514226498A0003523BC /* SettingsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84650D226498A0003523BC /* SettingsAssembly.swift */; };
+		ED846515226498A0003523BC /* SettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84650E226498A0003523BC /* SettingsInteractor.swift */; };
+		ED846516226498A0003523BC /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84650F226498A0003523BC /* SettingsRouter.swift */; };
+		ED846517226498A0003523BC /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED846510226498A0003523BC /* SettingsViewController.xib */; };
+		ED846518226498A0003523BC /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED846511226498A0003523BC /* SettingsPresenter.swift */; };
+		ED84651A2264CC66003523BC /* BasicTabBarAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8465192264CC66003523BC /* BasicTabBarAssembly.swift */; };
+		ED84651C2264CC7E003523BC /* BasicTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84651B2264CC7E003523BC /* BasicTabBarViewModel.swift */; };
+		ED8465252265FA16003523BC /* ServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84651E2265FA16003523BC /* ServiceViewModel.swift */; };
+		ED8465262265FA16003523BC /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED84651F2265FA16003523BC /* ServiceViewController.swift */; };
+		ED8465272265FA16003523BC /* ServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8465202265FA16003523BC /* ServiceAssembly.swift */; };
+		ED8465282265FA16003523BC /* ServiceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8465212265FA16003523BC /* ServiceInteractor.swift */; };
+		ED8465292265FA16003523BC /* ServiceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8465222265FA16003523BC /* ServiceRouter.swift */; };
+		ED84652A2265FA16003523BC /* ServiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED8465232265FA16003523BC /* ServiceViewController.xib */; };
+		ED84652B2265FA16003523BC /* ServicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8465242265FA16003523BC /* ServicePresenter.swift */; };
 		EDAD8B7D223A574600F0BB43 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAD8B7C223A574600F0BB43 /* AppConfiguration.swift */; };
 		EDAD8C14223A5FF200F0BB43 /* InitialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAD8C0D223A5FF200F0BB43 /* InitialViewModel.swift */; };
 		EDAD8C15223A5FF200F0BB43 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAD8C0E223A5FF200F0BB43 /* InitialViewController.swift */; };
@@ -41,7 +72,6 @@
 		EDBD40E7222FCA2700ADD9A0 /* Stylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBD40E5222FCA2700ADD9A0 /* Stylable.swift */; };
 		EDBD40E9222FCA9700ADD9A0 /* StyleWrapper+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBD40E8222FCA9700ADD9A0 /* StyleWrapper+UILabel.swift */; };
 		EDBD40EE222FCE3D00ADD9A0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EDBD40F0222FCE3D00ADD9A0 /* Localizable.strings */; };
-		EDBD40F3222FCF3E00ADD9A0 /* StyleWrapper+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBD40F2222FCF3E00ADD9A0 /* StyleWrapper+UIImageView.swift */; };
 		EDBD40F5222FCFF600ADD9A0 /* AppLocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBD40F4222FCFF600ADD9A0 /* AppLocalizationManager.swift */; };
 		EDBD40F7222FD01000ADD9A0 /* AppAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBD40F6222FD01000ADD9A0 /* AppAssets.swift */; };
 		EDBD40F9222FFBA000ADD9A0 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBD40F8222FFBA000ADD9A0 /* AppTheme.swift */; };
@@ -56,6 +86,37 @@
 		52534D87E093901861FA82C7 /* Pods-Test Playground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test Playground.release.xcconfig"; path = "Pods/Target Support Files/Pods-Test Playground/Pods-Test Playground.release.xcconfig"; sourceTree = "<group>"; };
 		AA4A1A64ADE76D2B3010137E /* Pods-Test Playground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test Playground.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Test Playground/Pods-Test Playground.debug.xcconfig"; sourceTree = "<group>"; };
 		ED8464E922649078003523BC /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		ED8464ED22649829003523BC /* AlbumByIdUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumByIdUseCase.swift; sourceTree = "<group>"; };
+		ED8464EF22649853003523BC /* RemoteListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteListViewModel.swift; sourceTree = "<group>"; };
+		ED8464F022649853003523BC /* RemoteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteListViewController.swift; sourceTree = "<group>"; };
+		ED8464F122649853003523BC /* RemoteListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteListAssembly.swift; sourceTree = "<group>"; };
+		ED8464F222649853003523BC /* RemoteListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteListInteractor.swift; sourceTree = "<group>"; };
+		ED8464F322649853003523BC /* RemoteListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteListRouter.swift; sourceTree = "<group>"; };
+		ED8464F422649853003523BC /* RemoteListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RemoteListViewController.xib; sourceTree = "<group>"; };
+		ED8464F522649853003523BC /* RemoteListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteListPresenter.swift; sourceTree = "<group>"; };
+		ED8464FD22649876003523BC /* LocalListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalListViewModel.swift; sourceTree = "<group>"; };
+		ED8464FE22649876003523BC /* LocalListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalListViewController.swift; sourceTree = "<group>"; };
+		ED8464FF22649876003523BC /* LocalListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalListAssembly.swift; sourceTree = "<group>"; };
+		ED84650022649876003523BC /* LocalListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalListInteractor.swift; sourceTree = "<group>"; };
+		ED84650122649876003523BC /* LocalListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalListRouter.swift; sourceTree = "<group>"; };
+		ED84650222649876003523BC /* LocalListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocalListViewController.xib; sourceTree = "<group>"; };
+		ED84650322649876003523BC /* LocalListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalListPresenter.swift; sourceTree = "<group>"; };
+		ED84650B226498A0003523BC /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		ED84650C226498A0003523BC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		ED84650D226498A0003523BC /* SettingsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAssembly.swift; sourceTree = "<group>"; };
+		ED84650E226498A0003523BC /* SettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractor.swift; sourceTree = "<group>"; };
+		ED84650F226498A0003523BC /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
+		ED846510226498A0003523BC /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		ED846511226498A0003523BC /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		ED8465192264CC66003523BC /* BasicTabBarAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTabBarAssembly.swift; sourceTree = "<group>"; };
+		ED84651B2264CC7E003523BC /* BasicTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTabBarViewModel.swift; sourceTree = "<group>"; };
+		ED84651E2265FA16003523BC /* ServiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewModel.swift; sourceTree = "<group>"; };
+		ED84651F2265FA16003523BC /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
+		ED8465202265FA16003523BC /* ServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
+		ED8465212265FA16003523BC /* ServiceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceInteractor.swift; sourceTree = "<group>"; };
+		ED8465222265FA16003523BC /* ServiceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRouter.swift; sourceTree = "<group>"; };
+		ED8465232265FA16003523BC /* ServiceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceViewController.xib; sourceTree = "<group>"; };
+		ED8465242265FA16003523BC /* ServicePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePresenter.swift; sourceTree = "<group>"; };
 		EDAD8B7C223A574600F0BB43 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		EDAD8C0D223A5FF200F0BB43 /* InitialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewModel.swift; sourceTree = "<group>"; };
 		EDAD8C0E223A5FF200F0BB43 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
@@ -92,7 +153,6 @@
 		EDBD40ED222FCE3100ADD9A0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		EDBD40EF222FCE3D00ADD9A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EDBD40F1222FCE3F00ADD9A0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		EDBD40F2222FCF3E00ADD9A0 /* StyleWrapper+UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StyleWrapper+UIImageView.swift"; sourceTree = "<group>"; };
 		EDBD40F4222FCFF600ADD9A0 /* AppLocalizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocalizationManager.swift; sourceTree = "<group>"; };
 		EDBD40F6222FD01000ADD9A0 /* AppAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssets.swift; sourceTree = "<group>"; };
 		EDBD40F8222FFBA000ADD9A0 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
@@ -142,8 +202,40 @@
 		ED8464E822648FB4003523BC /* TabBar Controller */ = {
 			isa = PBXGroup;
 			children = (
+				ED8465192264CC66003523BC /* BasicTabBarAssembly.swift */,
+				ED84651B2264CC7E003523BC /* BasicTabBarViewModel.swift */,
 			);
 			path = "TabBar Controller";
+			sourceTree = "<group>";
+		};
+		ED8464EB2264980A003523BC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EDAD8C3D223BA54600F0BB43 /* Album.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ED8464EC22649813003523BC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EDAD8C3F223BBAD200F0BB43 /* Photo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ED84651D2265FA08003523BC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				ED84651E2265FA16003523BC /* ServiceViewModel.swift */,
+				ED84651F2265FA16003523BC /* ServiceViewController.swift */,
+				ED8465202265FA16003523BC /* ServiceAssembly.swift */,
+				ED8465212265FA16003523BC /* ServiceInteractor.swift */,
+				ED8465222265FA16003523BC /* ServiceRouter.swift */,
+				ED8465232265FA16003523BC /* ServiceViewController.xib */,
+				ED8465242265FA16003523BC /* ServicePresenter.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		EDAD8B7E223A5A1800F0BB43 /* Remote */ = {
@@ -167,6 +259,13 @@
 		EDAD8B80223A5A2700F0BB43 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				ED8464F122649853003523BC /* RemoteListAssembly.swift */,
+				ED8464F222649853003523BC /* RemoteListInteractor.swift */,
+				ED8464F522649853003523BC /* RemoteListPresenter.swift */,
+				ED8464F322649853003523BC /* RemoteListRouter.swift */,
+				ED8464F022649853003523BC /* RemoteListViewController.swift */,
+				ED8464F422649853003523BC /* RemoteListViewController.xib */,
+				ED8464EF22649853003523BC /* RemoteListViewModel.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -181,6 +280,13 @@
 		EDAD8B82223A5A4900F0BB43 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				ED8464FF22649876003523BC /* LocalListAssembly.swift */,
+				ED84650022649876003523BC /* LocalListInteractor.swift */,
+				ED84650322649876003523BC /* LocalListPresenter.swift */,
+				ED84650122649876003523BC /* LocalListRouter.swift */,
+				ED8464FE22649876003523BC /* LocalListViewController.swift */,
+				ED84650222649876003523BC /* LocalListViewController.xib */,
+				ED8464FD22649876003523BC /* LocalListViewModel.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -236,8 +342,9 @@
 		EDAD8C1E223A6D8200F0BB43 /* Album */ = {
 			isa = PBXGroup;
 			children = (
-				EDAD8C3D223BA54600F0BB43 /* Album.swift */,
 				EDAD8C41223BBB5900F0BB43 /* AlbumUseCase.swift */,
+				ED8464ED22649829003523BC /* AlbumByIdUseCase.swift */,
+				ED8464EB2264980A003523BC /* Models */,
 			);
 			path = Album;
 			sourceTree = "<group>";
@@ -245,7 +352,7 @@
 		EDAD8C1F223A6D9900F0BB43 /* Photo */ = {
 			isa = PBXGroup;
 			children = (
-				EDAD8C3F223BBAD200F0BB43 /* Photo.swift */,
+				ED8464EC22649813003523BC /* Models */,
 			);
 			path = Photo;
 			sourceTree = "<group>";
@@ -313,8 +420,9 @@
 			isa = PBXGroup;
 			children = (
 				EDAD8C0C223A5FE300F0BB43 /* Initial */,
-				EDAD8B7E223A5A1800F0BB43 /* Remote */,
 				EDAD8B7F223A5A2000F0BB43 /* Local */,
+				EDAD8B7E223A5A1800F0BB43 /* Remote */,
+				ED84651D2265FA08003523BC /* Service */,
 				EDBD40EA222FCAEC00ADD9A0 /* Settings */,
 			);
 			path = "User Stories";
@@ -399,10 +507,10 @@
 		EDBD40D4222FC7F400ADD9A0 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
-				EDBD40FA222FFD5A00ADD9A0 /* Localizable.swift */,
 				EDBD40FC2230098900ADD9A0 /* AppLocalization.swift */,
 				EDBD40F4222FCFF600ADD9A0 /* AppLocalizationManager.swift */,
 				EDBD40F0222FCE3D00ADD9A0 /* Localizable.strings */,
+				EDBD40FA222FFD5A00ADD9A0 /* Localizable.swift */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -432,7 +540,6 @@
 			children = (
 				EDBD40E5222FCA2700ADD9A0 /* Stylable.swift */,
 				EDBD40E4222FCA2700ADD9A0 /* StyleWrapper.swift */,
-				EDBD40F2222FCF3E00ADD9A0 /* StyleWrapper+UIImageView.swift */,
 				EDBD40E8222FCA9700ADD9A0 /* StyleWrapper+UILabel.swift */,
 			);
 			path = Components;
@@ -441,6 +548,13 @@
 		EDBD40EA222FCAEC00ADD9A0 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				ED84650D226498A0003523BC /* SettingsAssembly.swift */,
+				ED84650E226498A0003523BC /* SettingsInteractor.swift */,
+				ED846511226498A0003523BC /* SettingsPresenter.swift */,
+				ED84650F226498A0003523BC /* SettingsRouter.swift */,
+				ED84650C226498A0003523BC /* SettingsViewController.swift */,
+				ED846510226498A0003523BC /* SettingsViewController.xib */,
+				ED84650B226498A0003523BC /* SettingsViewModel.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -542,11 +656,15 @@
 			files = (
 				EDBD40E0222FC93B00ADD9A0 /* PT Root UI_Bold.otf in Resources */,
 				EDBD409B222FB5C000ADD9A0 /* LaunchScreen.storyboard in Resources */,
+				ED84652A2265FA16003523BC /* ServiceViewController.xib in Resources */,
+				ED846517226498A0003523BC /* SettingsViewController.xib in Resources */,
 				EDBD40DC222FC93B00ADD9A0 /* PT Root UI_Regular.otf in Resources */,
 				EDBD40DD222FC93B00ADD9A0 /* PT Root UI_Light.otf in Resources */,
 				EDBD40EE222FCE3D00ADD9A0 /* Localizable.strings in Resources */,
 				EDBD4098222FB5C000ADD9A0 /* Assets.xcassets in Resources */,
 				EDBD40DF222FC93B00ADD9A0 /* PT Root UI_Medium.otf in Resources */,
+				ED8464FB22649853003523BC /* RemoteListViewController.xib in Resources */,
+				ED84650922649876003523BC /* LocalListViewController.xib in Resources */,
 				EDAD8C19223A5FF200F0BB43 /* InitialViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -587,6 +705,7 @@
 				"${BUILT_PRODUCTS_DIR}/GKRepresentable/GKRepresentable.framework",
 				"${BUILT_PRODUCTS_DIR}/GKUseCase/GKUseCase.framework",
 				"${BUILT_PRODUCTS_DIR}/GKViper/GKViper.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -598,6 +717,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GKRepresentable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GKUseCase.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GKViper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -627,34 +747,60 @@
 				EDBD40E9222FCA9700ADD9A0 /* StyleWrapper+UILabel.swift in Sources */,
 				EDAD8C40223BBAD200F0BB43 /* Photo.swift in Sources */,
 				EDBD40F7222FD01000ADD9A0 /* AppAssets.swift in Sources */,
-				EDBD40F3222FCF3E00ADD9A0 /* StyleWrapper+UIImageView.swift in Sources */,
+				ED846515226498A0003523BC /* SettingsInteractor.swift in Sources */,
 				EDAD8C18223A5FF200F0BB43 /* InitialRouter.swift in Sources */,
 				EDBD40CB222FBAF500ADD9A0 /* BasicNavigationController.swift in Sources */,
+				ED846518226498A0003523BC /* SettingsPresenter.swift in Sources */,
+				ED84650A22649876003523BC /* LocalListPresenter.swift in Sources */,
 				EDAD8C42223BBB5900F0BB43 /* AlbumUseCase.swift in Sources */,
 				EDD6326D2254AB1C007750AF /* AlbumRemoteRouter.swift in Sources */,
+				ED84650622649876003523BC /* LocalListAssembly.swift in Sources */,
 				EDAD8C1A223A5FF200F0BB43 /* InitialPresenter.swift in Sources */,
 				EDBD40FB222FFD5A00ADD9A0 /* Localizable.swift in Sources */,
 				EDAD8C16223A5FF200F0BB43 /* InitialAssembly.swift in Sources */,
+				ED8465292265FA16003523BC /* ServiceRouter.swift in Sources */,
 				EDD6326F2254AB74007750AF /* AlbumLocalRouter.swift in Sources */,
+				ED84652B2265FA16003523BC /* ServicePresenter.swift in Sources */,
+				ED8464FC22649853003523BC /* RemoteListPresenter.swift in Sources */,
+				ED8465252265FA16003523BC /* ServiceViewModel.swift in Sources */,
+				ED8465272265FA16003523BC /* ServiceAssembly.swift in Sources */,
 				EDAD8C2A223A82C500F0BB43 /* AlbumRepository.swift in Sources */,
 				EDBD40FD2230098900ADD9A0 /* AppLocalization.swift in Sources */,
 				EDAD8C17223A5FF200F0BB43 /* InitialInteractor.swift in Sources */,
+				ED8464F622649853003523BC /* RemoteListViewModel.swift in Sources */,
+				ED8464F722649853003523BC /* RemoteListViewController.swift in Sources */,
+				ED846516226498A0003523BC /* SettingsRouter.swift in Sources */,
+				ED846512226498A0003523BC /* SettingsViewModel.swift in Sources */,
 				EDAD8C3E223BA54600F0BB43 /* Album.swift in Sources */,
 				EDBD40F9222FFBA000ADD9A0 /* AppTheme.swift in Sources */,
+				ED846513226498A0003523BC /* SettingsViewController.swift in Sources */,
+				ED8464EE22649829003523BC /* AlbumByIdUseCase.swift in Sources */,
+				ED8465262265FA16003523BC /* ServiceViewController.swift in Sources */,
+				ED8465282265FA16003523BC /* ServiceInteractor.swift in Sources */,
 				EDAD8C28223A745500F0BB43 /* PhotoEntity.swift in Sources */,
 				ED8464EA22649078003523BC /* AppManager.swift in Sources */,
 				EDBD40E7222FCA2700ADD9A0 /* Stylable.swift in Sources */,
 				EDBD40F5222FCFF600ADD9A0 /* AppLocalizationManager.swift in Sources */,
+				ED84650722649876003523BC /* LocalListInteractor.swift in Sources */,
+				ED8464F822649853003523BC /* RemoteListAssembly.swift in Sources */,
+				ED846514226498A0003523BC /* SettingsAssembly.swift in Sources */,
 				EDAD8C24223A6DE800F0BB43 /* Playground.xcdatamodeld in Sources */,
 				EDBD40E6222FCA2700ADD9A0 /* StyleWrapper.swift in Sources */,
 				EDBD40D0222FBB6D00ADD9A0 /* AppDefaults.swift in Sources */,
 				EDAD8C44223BBE0400F0BB43 /* AlbumResponse.swift in Sources */,
+				ED84651C2264CC7E003523BC /* BasicTabBarViewModel.swift in Sources */,
+				ED84650522649876003523BC /* LocalListViewController.swift in Sources */,
+				ED84650822649876003523BC /* LocalListRouter.swift in Sources */,
 				EDBD40CE222FBB6000ADD9A0 /* AppThemeManager.swift in Sources */,
+				ED8464FA22649853003523BC /* RemoteListRouter.swift in Sources */,
+				ED8464F922649853003523BC /* RemoteListInteractor.swift in Sources */,
 				EDAD8C14223A5FF200F0BB43 /* InitialViewModel.swift in Sources */,
 				EDAD8C30223A8E6200F0BB43 /* PlaygroundRepository.swift in Sources */,
 				EDAD8C37223B8E9700F0BB43 /* AlbumEntity.swift in Sources */,
 				EDBD4091222FB5BE00ADD9A0 /* AppDelegate.swift in Sources */,
 				EDBD40DE222FC93B00ADD9A0 /* PTRootUI.swift in Sources */,
+				ED84651A2264CC66003523BC /* BasicTabBarAssembly.swift in Sources */,
+				ED84650422649876003523BC /* LocalListViewModel.swift in Sources */,
 				EDAD8C15223A5FF200F0BB43 /* InitialViewController.swift in Sources */,
 				EDAD8B7D223A574600F0BB43 /* AppConfiguration.swift in Sources */,
 			);

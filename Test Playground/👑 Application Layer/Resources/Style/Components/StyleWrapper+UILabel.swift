@@ -9,7 +9,18 @@ import UIKit
 
 extension StyleWrapper where Element: UILabel {
     
-    static var bigTitleStyle: StyleWrapper {
+    static func appTitleStyle() -> StyleWrapper {
+        return .wrap { label in
+            label.textAlignment = .center
+            label.numberOfLines = 1
+            label.lineBreakMode = .byTruncatingTail
+            label.font = PTRootUI.bold.font(size: 30.0)
+            label.textColor = AppTheme.textMain
+            label.adjustsFontSizeToFitWidth = true
+        }
+    }
+    
+    static func bigTitleStyle() -> StyleWrapper {
         return .wrap { label in
             label.textAlignment = .center
             label.numberOfLines = 0
@@ -19,7 +30,7 @@ extension StyleWrapper where Element: UILabel {
         }
     }
     
-    static var smallTitleStyle: StyleWrapper {
+    static func smallTitleStyle() -> StyleWrapper {
         return .wrap { label in
             label.textAlignment = .left
             label.numberOfLines = 0
@@ -29,7 +40,7 @@ extension StyleWrapper where Element: UILabel {
         }
     }
     
-    static var subtitleStyle: StyleWrapper {
+    static func subtitleStyle() -> StyleWrapper {
         return .wrap { label in
             label.textAlignment = .left
             label.numberOfLines = 0

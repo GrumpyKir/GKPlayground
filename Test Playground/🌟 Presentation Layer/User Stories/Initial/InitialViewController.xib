@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InitialViewController" customModule="Test_Playground" customModuleProvider="target">
             <connections>
+                <outlet property="appLogoImageView" destination="igR-7e-atl" id="9Iu-oT-ioc"/>
+                <outlet property="appLogoImageViewVertical" destination="k8j-SL-iEd" id="UTV-Qv-aaf"/>
+                <outlet property="appTitleLabel" destination="kbD-m4-tfZ" id="shq-2v-1BV"/>
+                <outlet property="appTitleLabelTop" destination="n7x-ES-JEq" id="Zzd-EL-cfg"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Rz8-f9-Cv3"/>
             </connections>
         </placeholder>
@@ -20,36 +24,28 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdu-4B-bMa">
-                    <rect key="frame" x="171.5" y="278.5" width="32" height="30"/>
-                    <state key="normal" title="ADD"/>
-                    <connections>
-                        <action selector="tapAddButton:" destination="-1" eventType="touchUpInside" id="qwZ-qN-OJi"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wk4-Ht-bf7">
-                    <rect key="frame" x="166" y="328.5" width="43" height="30"/>
-                    <state key="normal" title="PRINT"/>
-                    <connections>
-                        <action selector="tapPrintButton:" destination="-1" eventType="touchUpInside" id="0YF-4c-a6n"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lST-Eh-0fE">
-                    <rect key="frame" x="157" y="378.5" width="61" height="30"/>
-                    <state key="normal" title="REMOVE"/>
-                    <connections>
-                        <action selector="tapRemoveButton:" destination="-1" eventType="touchUpInside" id="ddo-s2-T9c"/>
-                    </connections>
-                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbD-m4-tfZ">
+                    <rect key="frame" x="47" y="454" width="281" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="igR-7e-atl">
+                    <rect key="frame" x="47" y="203" width="281" height="281"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="igR-7e-atl" secondAttribute="height" multiplier="1:1" id="Wdo-tW-sbN"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="lST-Eh-0fE" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="50" id="8Ac-vY-NCk"/>
-                <constraint firstItem="lST-Eh-0fE" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Ily-yK-PyF"/>
-                <constraint firstItem="wk4-Ht-bf7" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="YlV-Rv-Wl3"/>
-                <constraint firstItem="wk4-Ht-bf7" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="aq7-FK-kWh"/>
-                <constraint firstItem="rdu-4B-bMa" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="-50" id="swZ-QJ-uvr"/>
-                <constraint firstItem="rdu-4B-bMa" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="vu7-aX-2dX"/>
+                <constraint firstItem="kbD-m4-tfZ" firstAttribute="leading" secondItem="igR-7e-atl" secondAttribute="leading" id="CTC-sQ-Bb1"/>
+                <constraint firstItem="igR-7e-atl" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="GkJ-SL-Wff"/>
+                <constraint firstItem="kbD-m4-tfZ" firstAttribute="trailing" secondItem="igR-7e-atl" secondAttribute="trailing" id="QAL-1U-XIc"/>
+                <constraint firstItem="igR-7e-atl" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="k8j-SL-iEd"/>
+                <constraint firstItem="kbD-m4-tfZ" firstAttribute="top" secondItem="igR-7e-atl" secondAttribute="bottom" constant="-30" id="n7x-ES-JEq"/>
+                <constraint firstItem="igR-7e-atl" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.75" id="ro4-uU-qtU"/>
+                <constraint firstItem="kbD-m4-tfZ" firstAttribute="centerX" secondItem="igR-7e-atl" secondAttribute="centerX" id="x30-eU-meE"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>

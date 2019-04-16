@@ -29,10 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let vc = InitialAssembly.create()
         _ = InitialAssembly.configure(with: vc)
         
-        let nc = BasicNavigationController(rootViewController: vc)
-        
         self.window = window
-        self.window?.rootViewController = nc
+        self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
     }
 

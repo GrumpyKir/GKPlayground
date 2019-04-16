@@ -10,11 +10,17 @@ import GKViper
 
 protocol InitialViewInput: ViperViewInput { }
 
-protocol InitialViewOutput: ViperViewOutput { }
+protocol InitialViewOutput: ViperViewOutput {
+    func finishStartupAnimation()
+}
 
 class InitialViewController: ViperViewController, InitialViewInput {
 
     // MARK: - Outlets
+    @IBOutlet private weak var appLogoImageView: UIImageView!
+    @IBOutlet private weak var appLogoImageViewVertical: NSLayoutConstraint!
+    @IBOutlet private weak var appTitleLabel: UILabel!
+    @IBOutlet private weak var appTitleLabelTop: NSLayoutConstraint!
     
     // MARK: - Props
     fileprivate var output: InitialViewOutput? {
@@ -22,22 +28,33 @@ class InitialViewController: ViperViewController, InitialViewInput {
         return output
     }
     
-    fileprivate lazy var repository: AlbumRepository = AlbumRepository()
+    private let kLogoPositionOffset: CGFloat = -30.0
+    private let kTitlePositionOffset: CGFloat = 16.0
     
     // MARK: - Lifecycle
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.performInitialAnimation()
+    }
+    
     override func viewDidLayoutSubviews() {
         self.applyStyles()
     }
     
     // MARK: - Setup functions
     func setupComponents() {
-        self.navigationItem.title = AppLocalization.List.title.localized
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.appLogoImageView.image = AppAssets.appLogo
+        
+        self.appTitleLabel.alpha = 0.0
+        self.appTitleLabel.text = AppLocalization.title.localized
     }
     
     func setupActions() { }
     
-    func applyStyles() { }
+    func applyStyles() {
+        self.appTitleLabel.apply(.appTitleStyle())
+    }
     
     // MARK: - InitialViewInput
     override func setupInitialState(with viewModel: ViperViewModel) {
@@ -50,29 +67,21 @@ class InitialViewController: ViperViewController, InitialViewInput {
 }
 
 // MARK: - Actions
+extension InitialViewController { }
+
+// MARK: - Module functions
 extension InitialViewController {
     
-    @IBAction private func tapAddButton(_ sender: Any) {
-        let album = Album(id: 4)
-        album.title = "Test 4"
+    private func performInitialAnimation() {
+        self.appLogoImageViewVertical.constant = self.kLogoPositionOffset
+        self.appTitleLabelTop.constant = self.kTitlePositionOffset
         
-        self.repository.localAddAlbum(data: album)
-    }
-    
-    @IBAction private func tapPrintButton(_ sender: Any) {
-//        self.repository.remoteAlbumList()
-        
-        self.repository.remoteAlbum(id: 1)
-        
-//        self.repository.localAlbumList()
-    }
-    
-    @IBAction private func tapRemoveButton(_ sender: Any) {
-        let album = Album(id: 2)
-        self.repository.localRemoveAlbum(data: album)
+        UIView.animate(withDuration: 1.0, animations: {
+            self.appTitleLabel.alpha = 1.0
+            self.view.layoutIfNeeded()
+        }) { _ in
+            self.output?.finishStartupAnimation()
+        }
     }
     
 }
-
-// MARK: - Module functions
-extension InitialViewController { }

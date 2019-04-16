@@ -8,98 +8,68 @@
 import GKUseCase
 
 protocol AlbumRepositoryInterface: RepositoryInterface {
-    func localAlbumList()
-    func localAlbum(id: Int)
+    func localAlbum(id: Int, completion: @escaping (_ result: Album?) -> Void)
+    func localAlbumList(completion: @escaping (_ result: [Album]) -> Void)
     
-    func localAddAlbum(data: Album)
-    func localAddAlbums(data: [Album])
-    
-    func localRemoveAlbum(data: Album)
-    
-    func remoteAlbumList()
-    func remoteAlbum(id: Int)
+    func remoteAlbum(id: Int, completion: @escaping (_ result: Album?) -> Void)
+    func remoteAlbumList(completion: @escaping (_ result: [Album]) -> Void)
 }
 
 class AlbumRepository: PlaygroundRepository, AlbumRepositoryInterface {
         
     // MARK: - AlbumRepositoryInterface
-    func localAlbumList() {
+    func localAlbumList(completion: @escaping (_ result: [Album]) -> Void) {
         let request = AlbumLocalRouter.list.request
         
-        self.select(request) { (result, _) in
-            if let mappedResult = result as? [Album] {
-                print(mappedResult)
-                for album in mappedResult {
-                    print(album.id)
-                    print(album.title)
-                }
+        self.select(request) { (result, error) in
+            if let mappedResult = result as? [Album], error == nil {
+                completion(mappedResult)
+            } else {
+                completion([])
             }
         }
     }
     
-    func localAlbum(id: Int) {
+    func localAlbum(id: Int, completion: @escaping (_ result: Album?) -> Void) {
         let request = AlbumLocalRouter.item(albumId: id).request
         
-        self.select(request) { (result, _) in
-            if let mappedResult = result as? [Album] {
-                print(mappedResult)
-                for album in mappedResult {
-                    print(album.id)
-                    print(album.title)
-                }
+        self.select(request) { (result, error) in
+            if let mappedResult = result?.first as? Album, error == nil {
+                completion(mappedResult)
+            } else {
+                completion(nil)
             }
         }
     }
     
-    func localAddAlbum(data: Album) {
-        self.update(data) { (result, _) in
-            if let mappedResult = result as? Album {
-                print(mappedResult)
-            }
+    func remoteAlbumList(completion: @escaping (_ result: [Album]) -> Void) {
+        guard let request = AlbumRemoteRouter.list.request else {
+            completion([])
+            
+            return
         }
-    }
-    
-    func localAddAlbums(data: [Album]) {
-        self.update(data) { (result, _) in
-            if let mappedResult = result as? [Album] {
-                print(mappedResult)
-                for album in mappedResult {
-                    print(album.id)
-                    print(album.title)
-                }
-            }
-        }
-    }
-    
-    func localRemoveAlbum(data: Album) {
-        let request = AlbumLocalRouter.item(albumId: data.id).request
         
-        self.delete(request) { (result, _) in
-            print(result)
-        }
-    }
-    
-    func remoteAlbumList() {
-        guard let request = AlbumRemoteRouter.list.request else { return }
-
-        self.execute(request, response: [AlbumResponse].self) { (result, _, _) in
-            if let mappedResult = result as? [Album] {
-                print(mappedResult)
-                for album in mappedResult {
-                    print(album.id)
-                    print(album.title)
-                }
+        self.execute(request, response: [AlbumResponse].self) { (result, _, error) in
+            if let mappedResult = result as? [Album], error == nil {
+                completion(mappedResult)
+            } else {
+                completion([])
             }
         }
     }
     
-    func remoteAlbum(id: Int) {
-        guard let request = AlbumRemoteRouter.item(albumId: id).request else { return }
+    func remoteAlbum(id: Int, completion: @escaping (_ result: Album?) -> Void) {
+        guard let request = AlbumRemoteRouter.item(albumId: id).request else {
+            completion(nil)
+            
+            return
+        }
         
-        self.execute(request, response: AlbumResponse.self) { (result, _, _) in
-            if let mappedResult = result as? Album {
-                print(mappedResult.id)
-                print(mappedResult.title)
+        self.execute(request, response: AlbumResponse.self) { (result, _, error) in
+            if let mappedResult = result as? Album, error == nil {
+                completion(mappedResult)
+            } else {
+                completion(nil)
             }
         }
     }

@@ -22,6 +22,13 @@
 "Refresh" = "Refresh";
 "TryAgain" = "Try again";
 
+// MARK: - Приложение
+"AppTitle" = "PLAYGROUND";
+"TabRemoteListTitle" = "Network";
+"TabLocalListTitle" = "Database";
+"TabServiceTitle" = "Service";
+"TabsettingsTitle" = "Settings";
+
 // MARK: - Темы и языки
 "AppThemeLight" = "Light";
 "AppThemeDark" = "Dark";
