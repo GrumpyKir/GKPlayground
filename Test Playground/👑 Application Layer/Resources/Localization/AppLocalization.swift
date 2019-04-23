@@ -51,5 +51,13 @@ enum AppLocalization: String, Localizable {
         case save = "ListSaveItemTitle"
         case delete = "ListDeleteItemTitle"
     }
+    
+    enum Service: String, Localizable {
+        case title = "ServiceNavigationTitle"
+    }
+    
+    enum Settings: String, Localizable {
+        case title = "SettingsNavigationTitle"
+    }
 
 }

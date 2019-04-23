@@ -29,7 +29,7 @@ class SettingsViewController: ViperViewController, SettingsViewInput {
     
     // MARK: - Setup functions
     func setupComponents() {
-        self.navigationItem.title = "".localized
+        self.navigationItem.title = AppLocalization.Settings.title.localized
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     

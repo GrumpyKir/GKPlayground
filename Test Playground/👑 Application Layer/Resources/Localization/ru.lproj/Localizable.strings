@@ -41,3 +41,9 @@
 "ListEmptyPlaceholder" = "Данные отсутствуют";
 "ListSaveItemTitle" = "Сохранить";
 "ListDeleteItemTitle" = "Удалить";
+
+// MARK: - Сервис
+"ServiceNavigationTitle" = "Сервис";
+
+// MARK: - Настройки
+"SettingsNavigationTitle" = "Настройки";

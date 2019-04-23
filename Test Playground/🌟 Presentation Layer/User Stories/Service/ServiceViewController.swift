@@ -29,7 +29,7 @@ class ServiceViewController: ViperViewController, ServiceViewInput {
     
     // MARK: - Setup functions
     func setupComponents() {
-        self.navigationItem.title = "".localized
+        self.navigationItem.title = AppLocalization.Service.title.localized
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     

@@ -233,13 +233,13 @@
 		ED84651D2265FA08003523BC /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				ED84651E2265FA16003523BC /* ServiceViewModel.swift */,
-				ED84651F2265FA16003523BC /* ServiceViewController.swift */,
 				ED8465202265FA16003523BC /* ServiceAssembly.swift */,
 				ED8465212265FA16003523BC /* ServiceInteractor.swift */,
-				ED8465222265FA16003523BC /* ServiceRouter.swift */,
-				ED8465232265FA16003523BC /* ServiceViewController.xib */,
 				ED8465242265FA16003523BC /* ServicePresenter.swift */,
+				ED8465222265FA16003523BC /* ServiceRouter.swift */,
+				ED84651F2265FA16003523BC /* ServiceViewController.swift */,
+				ED8465232265FA16003523BC /* ServiceViewController.xib */,
+				ED84651E2265FA16003523BC /* ServiceViewModel.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
