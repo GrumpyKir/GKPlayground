@@ -29,10 +29,12 @@ class LocalListViewController: RemoteListViewController, LocalListViewInput {
     // MARK: - Lifecycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         self.updateForSections([])
         self.output?.reloadData()
     }
+    
+    // MARK: - Setup functions
     
     // MARK: - LocalListViewInput
     
