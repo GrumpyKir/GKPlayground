@@ -48,6 +48,8 @@ enum AppLocalization: String, Localizable {
     enum List: String, Localizable {
         case title = "ListNavigationTitle"
         case empty = "ListEmptyPlaceholder"
+        case save = "ListSaveItemTitle"
+        case delete = "ListDeleteItemTitle"
     }
 
 }

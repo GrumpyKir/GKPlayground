@@ -8,9 +8,14 @@
 
 import GKViper
 
-protocol RemoteListInteractorInput: ViperInteractorInput { }
+protocol RemoteListInteractorInput: ViperInteractorInput {
+    func loadAlbums()
+    func saveAlbum(_ album: Album)
+}
 
-protocol RemoteListInteractorOutput: ViperInteractorOutput { }
+protocol RemoteListInteractorOutput: ViperInteractorOutput {
+    func provideAlbums(_ value: [Album])
+}
 
 open class RemoteListInteractor: ViperInteractor, RemoteListInteractorInput {
 
@@ -22,12 +27,35 @@ open class RemoteListInteractor: ViperInteractor, RemoteListInteractorInput {
         return output
     }
     
+    var albumUseCase: AlbumUseCaseInput
+    
     // MARK: - Initialization
-    override init() {        
+    override init() {
+        self.albumUseCase = AlbumUseCase()
+        
         super.init()
+        
+        self.albumUseCase.subscribe(with: self)
     }
     
     // MARK: - RemoteListInteractorInput
+    func loadAlbums() {
+        self.output?.beginLoading()
+        self.albumUseCase.getAlbumList()
+    }
+    
+    func saveAlbum(_ album: Album) {
+        self.albumUseCase.saveAlbums(albums: [album])
+    }
     
     // MARK: - Module functions
+}
+
+extension RemoteListInteractor: AlbumUseCaseOutput {
+    
+    func provideAlbums(_ value: [Album]) {
+        self.output?.finishLoading(with: nil)
+        self.output?.provideAlbums(value)
+    }
+    
 }

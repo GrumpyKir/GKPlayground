@@ -7,12 +7,16 @@
 //
 
 import GKViper
+import GKRepresentable
 
-protocol LocalListViewInput: ViperViewInput { }
+protocol LocalListViewInput: RemoteListViewInput { }
 
-protocol LocalListViewOutput: ViperViewOutput { }
+protocol LocalListViewOutput: ViperViewOutput {
+    func selectAlbum(_ value: Album)
+    func deleteAlbum(_ value: Album)
+}
 
-class LocalListViewController: ViperViewController, LocalListViewInput {
+class LocalListViewController: RemoteListViewController, LocalListViewInput {
 
     // MARK: - Outlets
     
@@ -23,29 +27,14 @@ class LocalListViewController: ViperViewController, LocalListViewInput {
     }
     
     // MARK: - Lifecycle
-    override func viewDidLayoutSubviews() {
-        self.applyStyles()
-    }
-    
-    // MARK: - Setup functions
-    func setupComponents() {
-        self.navigationItem.title = AppLocalization.List.title.localized
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-    }
-    
-    func setupActions() { }
-    
-    func applyStyles() {
-        self.view.backgroundColor = AppTheme.backgroundMain
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.updateForSections([])
+        self.output?.reloadData()
     }
     
     // MARK: - LocalListViewInput
-    override func setupInitialState(with viewModel: ViperViewModel) {
-        super.setupInitialState(with: viewModel)
-        
-        self.setupComponents()
-        self.setupActions()
-    }
     
 }
 
@@ -54,3 +43,28 @@ extension LocalListViewController { }
 
 // MARK: - Module functions
 extension LocalListViewController { }
+
+// MARK: - UITableViewDelegate
+extension LocalListViewController {
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let model = self.sections[indexPath.section].rows[indexPath.row]
+        
+        if model is AlbumItemCellModel {
+            let deleteAction = UITableViewRowAction(style: .destructive, title: AppLocalization.List.delete.localized) { _, _ in
+                guard let album = model.userInfo["album"] as? Album else { return }
+                
+                self.output?.deleteAlbum(album)
+                
+                self.sections[indexPath.section].rows.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+            }
+            deleteAction.backgroundColor = .red
+            
+            return [deleteAction]
+        }
+        
+        return []
+    }
+    
+}

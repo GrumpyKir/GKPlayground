@@ -26,11 +26,11 @@ class BasicTabBarAssembly: UITabBarController {
     }
     
     class func configure(with controller: UITabBarController) {
-        controller.selectedIndex = 1
+        controller.selectedIndex = 0
         
         controller.tabBar.isTranslucent = true
         controller.tabBar.barTintColor = AppTheme.backgroundBar
-        controller.tabBar.tintColor = AppTheme.textMain
+        controller.tabBar.tintColor = AppTheme.accentMain
         controller.tabBar.unselectedItemTintColor = AppTheme.textSub
         
         guard let tabBarItems = controller.tabBar.items else { return }

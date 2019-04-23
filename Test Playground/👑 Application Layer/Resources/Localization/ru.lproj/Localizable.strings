@@ -39,3 +39,5 @@
 // MARK: - Список
 "ListNavigationTitle" = "Список";
 "ListEmptyPlaceholder" = "Данные отсутствуют";
+"ListSaveItemTitle" = "Сохранить";
+"ListDeleteItemTitle" = "Удалить";

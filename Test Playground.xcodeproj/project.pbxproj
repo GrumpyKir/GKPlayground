@@ -79,6 +79,9 @@
 		EDBD40FD2230098900ADD9A0 /* AppLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBD40FC2230098900ADD9A0 /* AppLocalization.swift */; };
 		EDD6326D2254AB1C007750AF /* AlbumRemoteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD6326C2254AB1C007750AF /* AlbumRemoteRouter.swift */; };
 		EDD6326F2254AB74007750AF /* AlbumLocalRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD6326E2254AB74007750AF /* AlbumLocalRouter.swift */; };
+		EDF808E9226F1BA400BDB753 /* AlbumItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF808E8226F1BA400BDB753 /* AlbumItemCell.swift */; };
+		EDF808EB226F1BAC00BDB753 /* AlbumItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDF808EA226F1BAC00BDB753 /* AlbumItemCell.xib */; };
+		EDF808ED226F1BC200BDB753 /* AlbumItemCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF808EC226F1BC200BDB753 /* AlbumItemCellModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -160,6 +163,9 @@
 		EDBD40FC2230098900ADD9A0 /* AppLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocalization.swift; sourceTree = "<group>"; };
 		EDD6326C2254AB1C007750AF /* AlbumRemoteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumRemoteRouter.swift; sourceTree = "<group>"; };
 		EDD6326E2254AB74007750AF /* AlbumLocalRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumLocalRouter.swift; sourceTree = "<group>"; };
+		EDF808E8226F1BA400BDB753 /* AlbumItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumItemCell.swift; sourceTree = "<group>"; };
+		EDF808EA226F1BAC00BDB753 /* AlbumItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumItemCell.xib; sourceTree = "<group>"; };
+		EDF808EC226F1BC200BDB753 /* AlbumItemCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumItemCellModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -456,6 +462,7 @@
 		EDBD40C8222FB69D00ADD9A0 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				EDF808E7226F1B9200BDB753 /* Album Item */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -592,6 +599,16 @@
 			path = Routers;
 			sourceTree = "<group>";
 		};
+		EDF808E7226F1B9200BDB753 /* Album Item */ = {
+			isa = PBXGroup;
+			children = (
+				EDF808E8226F1BA400BDB753 /* AlbumItemCell.swift */,
+				EDF808EA226F1BAC00BDB753 /* AlbumItemCell.xib */,
+				EDF808EC226F1BC200BDB753 /* AlbumItemCellModel.swift */,
+			);
+			path = "Album Item";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -656,6 +673,7 @@
 			files = (
 				EDBD40E0222FC93B00ADD9A0 /* PT Root UI_Bold.otf in Resources */,
 				EDBD409B222FB5C000ADD9A0 /* LaunchScreen.storyboard in Resources */,
+				EDF808EB226F1BAC00BDB753 /* AlbumItemCell.xib in Resources */,
 				ED84652A2265FA16003523BC /* ServiceViewController.xib in Resources */,
 				ED846517226498A0003523BC /* SettingsViewController.xib in Resources */,
 				EDBD40DC222FC93B00ADD9A0 /* PT Root UI_Regular.otf in Resources */,
@@ -762,6 +780,7 @@
 				EDD6326F2254AB74007750AF /* AlbumLocalRouter.swift in Sources */,
 				ED84652B2265FA16003523BC /* ServicePresenter.swift in Sources */,
 				ED8464FC22649853003523BC /* RemoteListPresenter.swift in Sources */,
+				EDF808E9226F1BA400BDB753 /* AlbumItemCell.swift in Sources */,
 				ED8465252265FA16003523BC /* ServiceViewModel.swift in Sources */,
 				ED8465272265FA16003523BC /* ServiceAssembly.swift in Sources */,
 				EDAD8C2A223A82C500F0BB43 /* AlbumRepository.swift in Sources */,
@@ -801,6 +820,7 @@
 				EDBD40DE222FC93B00ADD9A0 /* PTRootUI.swift in Sources */,
 				ED84651A2264CC66003523BC /* BasicTabBarAssembly.swift in Sources */,
 				ED84650422649876003523BC /* LocalListViewModel.swift in Sources */,
+				EDF808ED226F1BC200BDB753 /* AlbumItemCellModel.swift in Sources */,
 				EDAD8C15223A5FF200F0BB43 /* InitialViewController.swift in Sources */,
 				EDAD8B7D223A574600F0BB43 /* AppConfiguration.swift in Sources */,
 			);

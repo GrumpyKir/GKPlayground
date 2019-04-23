@@ -25,4 +25,9 @@ enum AppAssets {
     static var tabSettings: UIImage? {
         return UIImage(named: "SettingsIcon")
     }
+    
+    static var albumLogo: UIImage? {
+        return UIImage(named: "AlbumIcon")
+    }
+    
 }

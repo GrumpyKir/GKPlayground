@@ -7,6 +7,7 @@
 //
 
 import GKViper
+import GKRepresentable
 
 protocol LocalListPresenterInput: ViperPresenterInput { }
 
@@ -48,7 +49,37 @@ class LocalListPresenter: ViperPresenter, LocalListPresenterInput, LocalListView
         self.view?.setupInitialState(with: self.viewModel)
     }
     
+    override func reloadData() {
+        self.interactor?.loadAlbums()
+    }
+    
+    func selectAlbum(_ value: Album) {
+        //
+    }
+    
+    func deleteAlbum(_ value: Album) {
+        self.interactor?.deleteAlbum(value)
+    }
+    
     // MARK: - LocalListInteractorOutput
+    func provideAlbums(_ value: [Album]) {
+        self.makeSectionsModel(with: value)
+    }
     
     // MARK: - Module functions
+    private func makeSectionsModel(with albums: [Album]) {
+        let albumSection = TableSectionModel()
+        
+        for album in albums {
+            let albumRow = AlbumItemCellModel(title: album.title)
+            albumRow.userInfo["album"] = album
+            albumSection.rows.append(albumRow)
+        }
+        
+        if albumSection.rows.isEmpty {
+            self.view?.updateForSections([])
+        } else {
+            self.view?.updateForSections([albumSection])
+        }
+    }
 }
