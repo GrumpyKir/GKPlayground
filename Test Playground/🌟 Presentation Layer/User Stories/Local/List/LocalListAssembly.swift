@@ -12,6 +12,8 @@ enum LocalListAssembly {
     
     
     
+    
+    
     // Create and return controller
     static func create() -> LocalListViewController {
         return LocalListViewController(nibName: LocalListViewController.identifier, bundle: nil)
