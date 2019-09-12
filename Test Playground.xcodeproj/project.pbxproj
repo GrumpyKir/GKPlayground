@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		D222715495285672E0473B14 /* Pods_Test_Playground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1028CABEDD95EC2BFBDAEDC5 /* Pods_Test_Playground.framework */; };
+		ED6D9DA02296B01200671601 /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6D9D992296B01200671601 /* TestViewModel.swift */; };
+		ED6D9DA12296B01200671601 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6D9D9A2296B01200671601 /* TestViewController.swift */; };
+		ED6D9DA22296B01200671601 /* TestAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6D9D9B2296B01200671601 /* TestAssembly.swift */; };
+		ED6D9DA32296B01200671601 /* TestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6D9D9C2296B01200671601 /* TestInteractor.swift */; };
+		ED6D9DA42296B01200671601 /* TestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6D9D9D2296B01200671601 /* TestRouter.swift */; };
+		ED6D9DA52296B01200671601 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED6D9D9E2296B01200671601 /* TestViewController.xib */; };
+		ED6D9DA62296B01200671601 /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6D9D9F2296B01200671601 /* TestPresenter.swift */; };
 		ED8464EA22649078003523BC /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8464E922649078003523BC /* AppManager.swift */; };
 		ED8464EE22649829003523BC /* AlbumByIdUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8464ED22649829003523BC /* AlbumByIdUseCase.swift */; };
 		ED8464F622649853003523BC /* RemoteListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8464EF22649853003523BC /* RemoteListViewModel.swift */; };
@@ -88,6 +95,15 @@
 		1028CABEDD95EC2BFBDAEDC5 /* Pods_Test_Playground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test_Playground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52534D87E093901861FA82C7 /* Pods-Test Playground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test Playground.release.xcconfig"; path = "Pods/Target Support Files/Pods-Test Playground/Pods-Test Playground.release.xcconfig"; sourceTree = "<group>"; };
 		AA4A1A64ADE76D2B3010137E /* Pods-Test Playground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test Playground.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Test Playground/Pods-Test Playground.debug.xcconfig"; sourceTree = "<group>"; };
+		ED6D9D962296AA9900671601 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		ED6D9D972296AA9B00671601 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		ED6D9D992296B01200671601 /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
+		ED6D9D9A2296B01200671601 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		ED6D9D9B2296B01200671601 /* TestAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAssembly.swift; sourceTree = "<group>"; };
+		ED6D9D9C2296B01200671601 /* TestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInteractor.swift; sourceTree = "<group>"; };
+		ED6D9D9D2296B01200671601 /* TestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRouter.swift; sourceTree = "<group>"; };
+		ED6D9D9E2296B01200671601 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		ED6D9D9F2296B01200671601 /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
 		ED8464E922649078003523BC /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		ED8464ED22649829003523BC /* AlbumByIdUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumByIdUseCase.swift; sourceTree = "<group>"; };
 		ED8464EF22649853003523BC /* RemoteListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteListViewModel.swift; sourceTree = "<group>"; };
@@ -197,6 +213,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		ED6D9D982296AFDE00671601 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				ED6D9D9B2296B01200671601 /* TestAssembly.swift */,
+				ED6D9D9C2296B01200671601 /* TestInteractor.swift */,
+				ED6D9D9F2296B01200671601 /* TestPresenter.swift */,
+				ED6D9D9D2296B01200671601 /* TestRouter.swift */,
+				ED6D9D9A2296B01200671601 /* TestViewController.swift */,
+				ED6D9D9E2296B01200671601 /* TestViewController.xib */,
+				ED6D9D992296B01200671601 /* TestViewModel.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		ED8464E722648FA2003523BC /* Navigation Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +286,7 @@
 		EDAD8B7F223A5A2000F0BB43 /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				ED6D9D982296AFDE00671601 /* Test */,
 				EDAD8B82223A5A4900F0BB43 /* List */,
 				EDAD8B83223A5A5000F0BB43 /* Detail */,
 			);
@@ -655,6 +686,7 @@
 				en,
 				Base,
 				ru,
+				"zh-Hans",
 			);
 			mainGroup = EDBD4084222FB5BE00ADD9A0;
 			productRefGroup = EDBD408E222FB5BE00ADD9A0 /* Products */;
@@ -683,6 +715,7 @@
 				EDBD40DF222FC93B00ADD9A0 /* PT Root UI_Medium.otf in Resources */,
 				ED8464FB22649853003523BC /* RemoteListViewController.xib in Resources */,
 				ED84650922649876003523BC /* LocalListViewController.xib in Resources */,
+				ED6D9DA52296B01200671601 /* TestViewController.xib in Resources */,
 				EDAD8C19223A5FF200F0BB43 /* InitialViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -769,11 +802,14 @@
 				EDAD8C18223A5FF200F0BB43 /* InitialRouter.swift in Sources */,
 				EDBD40CB222FBAF500ADD9A0 /* BasicNavigationController.swift in Sources */,
 				ED846518226498A0003523BC /* SettingsPresenter.swift in Sources */,
+				ED6D9DA12296B01200671601 /* TestViewController.swift in Sources */,
 				ED84650A22649876003523BC /* LocalListPresenter.swift in Sources */,
+				ED6D9DA32296B01200671601 /* TestInteractor.swift in Sources */,
 				EDAD8C42223BBB5900F0BB43 /* AlbumUseCase.swift in Sources */,
 				EDD6326D2254AB1C007750AF /* AlbumRemoteRouter.swift in Sources */,
 				ED84650622649876003523BC /* LocalListAssembly.swift in Sources */,
 				EDAD8C1A223A5FF200F0BB43 /* InitialPresenter.swift in Sources */,
+				ED6D9DA22296B01200671601 /* TestAssembly.swift in Sources */,
 				EDBD40FB222FFD5A00ADD9A0 /* Localizable.swift in Sources */,
 				EDAD8C16223A5FF200F0BB43 /* InitialAssembly.swift in Sources */,
 				ED8465292265FA16003523BC /* ServiceRouter.swift in Sources */,
@@ -784,6 +820,7 @@
 				ED8465252265FA16003523BC /* ServiceViewModel.swift in Sources */,
 				ED8465272265FA16003523BC /* ServiceAssembly.swift in Sources */,
 				EDAD8C2A223A82C500F0BB43 /* AlbumRepository.swift in Sources */,
+				ED6D9DA02296B01200671601 /* TestViewModel.swift in Sources */,
 				EDBD40FD2230098900ADD9A0 /* AppLocalization.swift in Sources */,
 				EDAD8C17223A5FF200F0BB43 /* InitialInteractor.swift in Sources */,
 				ED8464F622649853003523BC /* RemoteListViewModel.swift in Sources */,
@@ -795,7 +832,9 @@
 				ED846513226498A0003523BC /* SettingsViewController.swift in Sources */,
 				ED8464EE22649829003523BC /* AlbumByIdUseCase.swift in Sources */,
 				ED8465262265FA16003523BC /* ServiceViewController.swift in Sources */,
+				ED6D9DA62296B01200671601 /* TestPresenter.swift in Sources */,
 				ED8465282265FA16003523BC /* ServiceInteractor.swift in Sources */,
+				ED6D9DA42296B01200671601 /* TestRouter.swift in Sources */,
 				EDAD8C28223A745500F0BB43 /* PhotoEntity.swift in Sources */,
 				ED8464EA22649078003523BC /* AppManager.swift in Sources */,
 				EDBD40E7222FCA2700ADD9A0 /* Stylable.swift in Sources */,
@@ -834,6 +873,7 @@
 			children = (
 				EDBD409A222FB5C000ADD9A0 /* Base */,
 				EDBD40ED222FCE3100ADD9A0 /* ru */,
+				ED6D9D962296AA9900671601 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -843,6 +883,7 @@
 			children = (
 				EDBD40EF222FCE3D00ADD9A0 /* en */,
 				EDBD40F1222FCE3F00ADD9A0 /* ru */,
+				ED6D9D972296AA9B00671601 /* zh-Hans */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
