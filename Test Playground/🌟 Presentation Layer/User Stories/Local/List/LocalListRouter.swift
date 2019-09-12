@@ -21,6 +21,12 @@ class LocalListRouter: ViperRouter, LocalListRouterInput {
     }
     
     // MARK: - LocalListRouterInput
+    func test() {
+        let vc = TestAssembly.create()
+        _ = TestAssembly.configure(with: vc)
+        
+        self.present(vc, animated: true)
+    }
     
     // MARK: - Module functions
 }
