@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ServiceViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ServiceViewController" customModule="Test_Playground" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="iN0-l3-epB" id="Rz8-f9-Cv3"/>
             </connections>
@@ -19,8 +17,49 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label LabelLabel LabelLabel LabelLabel Label  Label LabelLabel Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JpI-cI-lK4">
+                    <rect key="frame" x="16" y="60" width="343" height="41"/>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eZ2-7y-MyZ">
+                    <rect key="frame" x="158.5" y="141" width="58" height="37"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7B0-Cc-vri">
+                            <rect key="frame" x="8" y="8" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="7B0-Cc-vri" firstAttribute="top" secondItem="eZ2-7y-MyZ" secondAttribute="top" constant="8" id="1cL-ID-wXn"/>
+                        <constraint firstItem="7B0-Cc-vri" firstAttribute="centerX" secondItem="eZ2-7y-MyZ" secondAttribute="centerX" id="OXJ-Fx-HgC"/>
+                        <constraint firstItem="7B0-Cc-vri" firstAttribute="centerY" secondItem="eZ2-7y-MyZ" secondAttribute="centerY" id="VSi-wB-Bbt"/>
+                        <constraint firstItem="7B0-Cc-vri" firstAttribute="leading" secondItem="eZ2-7y-MyZ" secondAttribute="leading" constant="8" id="WL6-f1-5Md"/>
+                        <constraint firstAttribute="trailing" secondItem="7B0-Cc-vri" secondAttribute="trailing" constant="8" id="aOE-Qw-3s7"/>
+                        <constraint firstAttribute="bottom" secondItem="7B0-Cc-vri" secondAttribute="bottom" constant="8" id="gSv-08-8fE"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VbY-KZ-hUr">
+                    <rect key="frame" x="87" y="233" width="200" height="110"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </stackView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="JpI-cI-lK4" secondAttribute="trailing" constant="16" id="PdL-9Y-cG1"/>
+                <constraint firstItem="JpI-cI-lK4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="dxi-mB-P0j"/>
+                <constraint firstItem="JpI-cI-lK4" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="60" id="lnk-r2-qHE"/>
+                <constraint firstItem="eZ2-7y-MyZ" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="uml-8v-QtL"/>
+                <constraint firstItem="eZ2-7y-MyZ" firstAttribute="top" secondItem="JpI-cI-lK4" secondAttribute="bottom" constant="40" id="unb-Wd-ium"/>
+                <constraint firstItem="JpI-cI-lK4" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="vO2-m7-7je"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="138" y="153"/>
         </view>
     </objects>
 </document>

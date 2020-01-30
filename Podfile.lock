@@ -1,0 +1,44 @@
+PODS:
+  - GKCoreData (1.0.4):
+    - GKExtensions (~> 1.1.0)
+  - GKExtensions (1.1.0)
+  - GKNetwork (1.0.0):
+    - GKExtensions (~> 1.1.0)
+  - GKRepresentable (1.0.1):
+    - GKExtensions (~> 1.1.0)
+  - GKUseCase (1.0.1):
+    - GKCoreData (~> 1.0.4)
+    - GKExtensions (~> 1.1.0)
+    - GKNetwork (~> 1.0.0)
+  - GKViper (1.0.0):
+    - GKExtensions (~> 1.1.0)
+  - Kingfisher (5.3.1)
+
+DEPENDENCIES:
+  - GKRepresentable (~> 1.0.1)
+  - GKUseCase (~> 1.0.1)
+  - GKViper (~> 1.0.0)
+  - Kingfisher
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - GKCoreData
+    - GKExtensions
+    - GKNetwork
+    - GKRepresentable
+    - GKUseCase
+    - GKViper
+    - Kingfisher
+
+SPEC CHECKSUMS:
+  GKCoreData: 3e4701de4e614064e74e17f9923273ca4ea743e1
+  GKExtensions: e2336b4ae2a62bfc968fd1a4ced30365ffb3f73b
+  GKNetwork: 8cf98586bc75269e45dd36e4aed047eb67f6cfc1
+  GKRepresentable: 6dcaa093a142604c5f2caa24a3839512331aa2eb
+  GKUseCase: b215028ecbee5c5b48f2e7c5f4b728acd7dc4f69
+  GKViper: 1ffe86f32753c4fc834c1325ee1892806c9ff1aa
+  Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
+
+PODFILE CHECKSUM: 5a1aedc09ce1818c258b800de8f4b899e478be03
+
+COCOAPODS: 1.6.1
